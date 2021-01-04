@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/fonts.css"> 
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <section class="main" id="app" >
+        <h1>Кредитный калькулятор</h1>
+        <div class="main_blocks">
+            <div class="main_blocks_left">
+                <div class="title">Выбор кредитора </div>
+                <div class="credit-giver">Easy Credit</div>
+                <div class="credit-giver">Iute Credit</div>
+                <div class="credit-giver">Micro Invest Credit</div>
+            </div>
+            <div class="main_blocks_right">
+                <div class="title">Ваши данные</div>
+                <form action="">
+                    <div class="input">
+                        <label for="">{{label}}</label>
+                        <input type="text" name="" id=""
+                        
+                        v-bind:placeholder="placeHolderString"
+                        v-bind:value="nameValue"
+                        v-on:input="nameHandler"
+                        
+                        >
+                    </div>
+                    <div class="slider">
+                        <div class="slider_block">
+                            <div class="title">Сумма</div>
+                            <div class="summ">0 mdl</div>
+                        </div>
+                        <input class="slider_range" type="range" name="" id="" min="5000" max="50000" value="0" steps="500" >
+                    </div>
+                    <div class="select mt-25">
+                        <label for="select">Срок кредитования</label>
+                        <select class="select_drop" type="text" name="" id="select" value="" placeholder="Ваше имя">
+                            <option value="6">Volvo</option>
+                            <option value="12">Saab</option>
+                            <option value="18">Fiat</option>
+                            <option value="36">Audi</option>
+                            </select>
+                    </div>
+                </form>
+            
+            </div>
+
+            <button class="main_blocks_button">Расчитать</button>
+        </div>
+    </section>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
