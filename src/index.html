@@ -22,35 +22,37 @@
 				<div class="title">Ваши данные</div>
 				<form action="">
 					<div class="input">
-							<label for="">{{label}}</label>
-							<input type="text"
-							
-							v-bind:placeholder="placeHolderString"
-							v-bind:value="nameValue"
-							v-on:input="nameHandler"
-							v-on:input=""
-							>
+						<label for="" v-bind:class="{'red_text': redText }">{{label}}</label>
+						<input type="text"
+						
+						v-bind:placeholder="placeHolderString"
+						v-bind:value="getNameValueComputed"
+						v-on:input="getNameValue"
+						v-bind:class="{
+							'rb': rb
+						}"
+						>
 					</div>
 					<div class="slider">
-							<div class="slider_block">
-									<div class="title">Сумма</div>
-									<div class="summ">{{rangeValue}}  mdl</div>
-							</div>
-							<input class="slider_range" type="range" name="" id="" min="5000" max="50000" v-on:input="getRangeValue" step="500" >
+						<div class="slider_block">
+							<div class="title">Сумма</div>
+							<div class="summ">{{rangeValue}}  mdl</div>
+						</div>
+						<input class="slider_range" type="range" name="" id="" min="5000" max="50000" v-on:input="getRangeValue" step="500" >
 					</div>
 					<div class="select mt-25">
-							<label for="select">Срок кредитования</label>
-							<select class="select_drop" type="text" name="" id="select" v-on:input="getTimeValue" placeholder="Ваше имя">
-									<option value="6">6 мес</option>
-									<option value="12">12 мес</option>
-									<option value="18">18 мес</option>
-									<option value="36">36 мес</option>
-									</select>
+						<label for="select">Срок кредитования</label>
+						<select class="select_drop" type="text" name="" id="select" v-on:input="getTimeValue" placeholder="Ваше имя">
+							<option value="6">6 мес</option>
+							<option value="12">12 мес</option>
+							<option value="18">18 мес</option>
+							<option value="36">36 мес</option>
+							</select>
 					</div>
 				</form>
 			
 			</div> 
-				<button v-on:click="takeUser" class="main_blocks_button">Расчитать</button>
+			<button v-on:click="takeUser" class="main_blocks_button">Расчитать</button>
 		</div> 
 	</section>
 

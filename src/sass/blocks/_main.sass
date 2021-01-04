@@ -71,7 +71,7 @@
                         bottom: 4px
                         left: -4px
                         content: ''
-                        width: 105%
+                        width: calc( 100% + 7px )
                         height: 3px
                         background: #FFFFFF
                 input
@@ -113,23 +113,24 @@
                         line-height: 14px 
                         text-align: right 
                         color: #494949
-                &_range
-                    margin-top: 10px
+                &_range 
                     -webkit-appearance: none
+                    margin-top: 10px
                     height: 2px
                     outline: none
                     cursor: pointer
                     background: #B3B3B3
                     border-radius: 5px
-                    &::-webkit-slider-thumb
+                    &::-webkit-slider-thumb 
                         -webkit-appearance: none
+                        display: flex
                         height: 16px
                         width: 16px
                         background: #FFB800;
                         border: 1px solid #F8F8F8;
                         box-sizing: border-box;
                         box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-                        border-radius: 50px
+                        border-radius: 50px  
             .select
                 position: relative
                 label
